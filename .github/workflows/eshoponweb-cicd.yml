@@ -3,13 +3,13 @@ name: eShopOnWeb Build and Test
 #Triggers (uncomment line below to use it)
 on: [push, workflow_dispatch]
 
-# Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
+#Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
-  RESOURCE-GROUP: rg-az400-eshoponweb-dc
+  RESOURCE-GROUP: VisualStudioOnline-302E8C0B9F6E42D89D01ADBFD14DC9B4
   LOCATION: eastus
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
-  SUBSCRIPTION-ID: 42968a1c-a920-4e3e-839e-f8f6af87ed17
-  WEBAPP-NAME: az400-webapp-dc2023
+  SUBSCRIPTION-ID: b7d5a450-0a76-43b3-8355-42d2899192f8
+  WEBAPP-NAME: daveaz
 
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
         include-prerelease: true
     #Build/Test/Publish the .net project
     - name: Build with dotnet
